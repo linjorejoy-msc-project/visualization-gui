@@ -1,12 +1,11 @@
-from tkinter import Frame, LabelFrame
+from tkinter import Frame
 from tkinter import N
 
-import visualization_gui_main
 from widgetclasses.MyLabelFrame import MyLabelFrame
 
 
-class StartPage(Frame):
-    def __init__(self, parent, controller: visualization_gui_main.VisualizationGui):
+class MasterPage(Frame):
+    def __init__(self, parent, controller):
         Frame.__init__(self, parent)
         self.parent = parent
         self.controller = controller

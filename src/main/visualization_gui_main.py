@@ -4,7 +4,8 @@ from tkinter import TOP, BOTH, NSEW
 
 # Pages
 import pages.StartPage as StartPage
-import pages.ServerPage as ServerPage
+import pages.TestPage as TestPage
+import pages.StartServer as StartServer
 
 # Helpermodules
 from helpermodules.constants import CURRENT_VERSION, settings_dict
@@ -13,6 +14,9 @@ from helpermodules.constants import CURRENT_VERSION, settings_dict
 class VisualizationGui(Tk):
     def __init__(self, *args, **kwargs):
         Tk.__init__(self, *args, **kwargs)
+
+        # Global Vars and Constants
+        self.server_socket = None
 
         # Storing Frames
         self.frames = {}
@@ -35,7 +39,7 @@ class VisualizationGui(Tk):
         self.global_container.grid_rowconfigure(0, weight=1)
         self.global_container.columnconfigure(0, weight=1)
 
-        FRAMES = [StartPage.StartPage, ServerPage.ServerPage]
+        FRAMES = [StartPage.StartPage, StartServer.StartServer, TestPage.TestPage]
 
         for FRAME in FRAMES:
             frame = FRAME(self.global_container, self)
@@ -44,7 +48,7 @@ class VisualizationGui(Tk):
 
         # Add Menu
         self.add_menu()
-        self.show_frame(StartPage.StartPage)
+        self.show_frame(StartServer.StartServer)
 
     def get_screen_dimentions(self, ratio: float = 0.8):
 
