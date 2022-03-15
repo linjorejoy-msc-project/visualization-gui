@@ -6,9 +6,11 @@ from widgetclasses.MyLabelFrame import MyLabelFrame
 
 class MasterPage(Frame):
     def __init__(self, parent, controller):
+        from main.visualization_gui_main import VisualizationGui
+
         Frame.__init__(self, parent)
         self.parent = parent
-        self.controller = controller
+        self.controller: VisualizationGui = controller
 
         self.header_label_frame = MyLabelFrame(
             self, self.controller, text="Preferences", height="80", expand=N

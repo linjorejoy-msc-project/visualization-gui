@@ -2,6 +2,12 @@
 from tkinter import Tk, Frame, Menu
 from tkinter import TOP, BOTH, NSEW
 
+import socket
+import threading
+
+# Helper Functions
+from helperfunctions.logger import write_log
+
 # Pages
 import pages.StartPage as StartPage
 import pages.TestPage as TestPage
@@ -16,7 +22,9 @@ class VisualizationGui(Tk):
         Tk.__init__(self, *args, **kwargs)
 
         # Global Vars and Constants
-        self.server_socket = None
+        self.server_socket: socket.socket = None
+        self.clients = {}
+        self.topic_info = {}
 
         # Storing Frames
         self.frames = {}
@@ -85,7 +93,28 @@ class VisualizationGui(Tk):
         prev_frame.tkraise()
 
 
-if __name__ == "__main__":
+def start_gui():
 
     app = VisualizationGui()
+
+    def on_close():
+        write_log()
+        app.destroy()
+        exit(0)
+
+    app.protocol("WM_DELETE_WINDOW", on_close)
     app.mainloop()
+
+
+if __name__ == "__main__":
+    gui_thread = threading.Thread(target=start_gui)
+    gui_thread.start()
+
+    # app = VisualizationGui()
+
+    # def on_close():
+    #     write_log()
+    #     app.destroy()
+
+    # app.protocol("WM_DELETE_WINDOW", on_close)
+    # app.mainloop()

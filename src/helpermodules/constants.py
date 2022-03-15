@@ -32,3 +32,12 @@ DEF_LABEL_TEXT = "Default Text"
 
 # Text
 DEF_TEXT_TEXT = "Default Text"
+
+
+#
+# Server Constants
+#
+
+
+HEADERSIZE = 5
+BUFFERSIZE = 32
