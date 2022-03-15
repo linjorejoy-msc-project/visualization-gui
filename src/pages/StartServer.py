@@ -1,8 +1,10 @@
+import json
 import socket
 import threading
 import time
 from tkinter import SW, NSEW
 from helperfunctions.logger import add_log
+from helpermodules.RequiredObjects import Client, ConfigData
 
 import pages.MasterPage as MasterPage
 
@@ -27,12 +29,15 @@ class StartServer(MasterPage.MasterPage):
         self.start_listening_cycle_button = None
         self.stop_listening_cycle_button = None
 
-        self.listening = False
+        self.listening = True
         self.listening_cycle_continue = True
         self.listen_max_times = 5
 
-        self.bg_func_thread = threading.Thread(target=self.bg_functions)
-        self.bg_func_thread.start()
+        self.listening_thread = threading.Thread(target=self.listening_function)
+        self.listening_thread.start()
+
+        # self.bg_func_thread = threading.Thread(target=self.bg_functions)
+        # self.bg_func_thread.start()
 
         # self.bg_functions()
 
@@ -63,6 +68,11 @@ class StartServer(MasterPage.MasterPage):
             grid=(0, 2),
             sticky=NSEW,
         )
+
+    def column_configure_body_frame(self):
+        self.body_label_frame.columnconfigure(0, weight=1)
+        self.body_label_frame.columnconfigure(1, weight=1)
+        self.body_label_frame.columnconfigure(2, weight=3)
 
     def set_ui_sublabelframe1(self):
         self.start_server_button = MyButton(
@@ -130,68 +140,24 @@ class StartServer(MasterPage.MasterPage):
             anchor=SW,
         )
 
-    def column_configure_body_frame(self):
-        self.body_label_frame.columnconfigure(0, weight=1)
-        self.body_label_frame.columnconfigure(1, weight=1)
-        self.body_label_frame.columnconfigure(2, weight=3)
-
     def set_ui(self):
         self.set_subframes_bodyframe()
         self.set_ui_sublabelframe1()
         self.column_configure_body_frame()
         return super().set_ui()
 
-    def bg_functions(self):
-        self.controller.after(1000, self.server_listening)
-        # pass
-
-    def starting_server(self):
-        self.controller.server_socket = start_server(
-            addressFamily=socket.AF_INET,
-            socketKind=socket.SOCK_STREAM,
-            hostName=socket.gethostname(),
-            port=1234,
-        )
-        add_log("INFO", str(self.controller.server_socket))
-
-    def server_listening(self):
-
+    def listening_function(self):
         while self.listening:
             client_socket, address = self.controller.server_socket.accept()
-            data = on_new_client(
-                client_socket=client_socket, addr=address, iterations=3
+            config_data = on_new_client(client_socket=client_socket, addr=address)
+            config_data_obj: ConfigData = ConfigData(
+                config_json=json.loads(config_data)
             )
-            if data:
-                print(f"Data Received : {data=}")
-                return
 
-        if self.listening_cycle_continue:
-            self.controller.after(1000, self.server_listening)
+            ClientObj: Client = Client(
+                client_socket=client_socket,
+                address=address,
+                config_data=config_data_obj,
+            )
 
-    def start_listening(self):
-        add_log(
-            "INFO",
-            f"Server has started Listening at {str(self.controller.server_socket)}",
-        )
-        self.listening = True
-
-    def stop_listening(self):
-        add_log(
-            "INFO",
-            f"Server has stopped Listening at {str(self.controller.server_socket)}",
-        )
-        self.listening = False
-
-    def start_listening_cycle(self):
-        add_log(
-            "INFO",
-            f"Server has started Listening Cycle at {str(self.controller.server_socket)}",
-        )
-        self.listening_cycle_continue = True
-
-    def stop_listening_cycle(self):
-        add_log(
-            "INFO",
-            f"Server has stopped Listening Cycle at {str(self.controller.server_socket)}",
-        )
-        self.listening_cycle_continue = False
+            self.controller.clients.add_client(ClientObj)

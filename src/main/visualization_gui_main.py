@@ -7,6 +7,7 @@ import threading
 
 # Helper Functions
 from helperfunctions.logger import write_log
+from helpermodules.RequiredObjects import ClientList, Client, ConfigData
 
 # Pages
 import pages.StartPage as StartPage
@@ -23,7 +24,7 @@ class VisualizationGui(Tk):
 
         # Global Vars and Constants
         self.server_socket: socket.socket = None
-        self.clients = {}
+        self.clients: ClientList = None
         self.topic_info = {}
 
         # Storing Frames
