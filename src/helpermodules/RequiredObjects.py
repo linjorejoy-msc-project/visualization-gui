@@ -1,6 +1,6 @@
 import socket
 
-from typing import List
+from typing import List, Dict
 
 
 class ConfigData:
@@ -30,24 +30,66 @@ class ConfigData:
             self.variables_subscribed = variables_subscribed
 
 
-class Client:
+class Participant:
     def __init__(
         self,
-        client_socket: socket.socket,
-        address: socket._Address,
+        participant_socket: socket.socket,
+        address,
         config_data: ConfigData,
     ) -> None:
-        self.client_socket = client_socket
+        self.participant_socket = participant_socket
         self.address = address
         self.config_data = config_data
 
+    def get_participant_socket(self):
+        return self.participant_socket
 
-class ClientList:
+
+class Topic:
+    def __init__(self, topic_name: str) -> None:
+        self.topic_name = topic_name
+        self.regex_format = ""
+        self.subscribed_participants: List[Participant] = []
+
+    def add_subscribed_participant(self, participant: Participant):
+        # TODO
+        self.subscribed_participants.append
+
+
+class DDSInfo:
     def __init__(self) -> None:
-        self.clients: List[Client] = []
+        self.topics: List[Topic] = []
+        self.participants: List[Participant] = []
 
-    def add_client(self, client: Client):
-        self.clients.append(client)
+    def get_participant_list(self):
+        return self.participants
 
-    def remove_client(self, client: Client):
-        self.clients.remove(client)
+    def get_participant_by_socket(self):
+        pass
+
+    def add_subscribed_participant(self, participant: Participant):
+        self.participants.append(participant)
+        self.add_participant_info_to_topics(participant)
+
+    def remove_subscribed_participant(self, participant: Participant):
+        self.participants.remove(participant)
+
+    def add_topic_info_from_list(self, topic_list: List[Dict[str, str]]):
+        for topic_dict in topic_list:
+            this_topic_obj = Topic(topic_dict["name"])
+            this_topic_obj.regex_format = topic_dict["regex"]
+            self.topics.append(this_topic_obj)
+
+    def get_topic_by_name(self, name: str):
+        for topic in self.topics:
+            if topic.topic_name == name:
+                return topic
+        return
+
+    def add_participant_info_to_topics(self, participant: Participant):
+        for topic_name in participant.config_data.subscribed_topics:
+            this_topic_obj = self.get_topic_by_name(topic_name)
+            if this_topic_obj:
+                this_topic_obj.add_subscribed_participant(participant)
+            else:
+                print(f"{topic_name} does not have a topic object")
