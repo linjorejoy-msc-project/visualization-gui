@@ -1,6 +1,22 @@
 import socket
+import logging
 
 from typing import List, Dict
+
+FORMAT = "%(levelname)-10s %(asctime)s: %(message)s"
+logging.basicConfig(
+    filename="src/LOGS/logs.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format=FORMAT,
+)
+
+
+class MessageData:
+    def __init__(self) -> None:
+        self.from_participant
+        self.topic
+        self.msg
 
 
 class ConfigData:
@@ -44,16 +60,23 @@ class Participant:
     def get_participant_socket(self):
         return self.participant_socket
 
+    def is_subscribed_to_topic(self, topic: str):
+        return topic in self.config_data.subscribed_topics
+
 
 class Topic:
     def __init__(self, topic_name: str) -> None:
         self.topic_name = topic_name
         self.regex_format = ""
         self.subscribed_participants: List[Participant] = []
+        self.messages: List[MessageData] = []
 
     def add_subscribed_participant(self, participant: Participant):
         # TODO
-        self.subscribed_participants.append
+        self.subscribed_participants.append(participant)
+
+    def get_subscribed_participants(self):
+        return self.subscribed_participants
 
 
 class DDSInfo:
@@ -76,6 +99,7 @@ class DDSInfo:
 
     def add_topic_info_from_list(self, topic_list: List[Dict[str, str]]):
         for topic_dict in topic_list:
+            logging.info(f"{topic_dict} conveted to object")
             this_topic_obj = Topic(topic_dict["name"])
             this_topic_obj.regex_format = topic_dict["regex"]
             self.topics.append(this_topic_obj)

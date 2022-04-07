@@ -10,7 +10,7 @@ import threading
 from typing import List
 
 # Helper Functions
-from helperfunctions.logger import write_log
+# from helperfunctions.logger import write_log
 from helpermodules.RequiredObjects import DDSInfo
 from pages.MasterPage import MasterPage
 
@@ -141,7 +141,7 @@ def start_gui():
     app = VisualizationGui()
 
     def on_close():
-        write_log()
+        # write_log()
         app.destroy()
         exit(0)
 

@@ -11,6 +11,7 @@ topics = [
     {"name": "thrust", "regex": ""},
     {"name": "drag", "regex": ""},
     {"name": "motion", "regex": ""},
+    {"name": "field", "regex": ""},
     {"name": "env_properties", "regex": ""},
 ]
 
