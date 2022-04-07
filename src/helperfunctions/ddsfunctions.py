@@ -7,12 +7,11 @@ from helpermodules.RequiredObjects import DDSInfo
 # Constants
 topics = [
     {"name": "fuel_flow", "regex": ""},
-    {"name": "thrust_change", "regex": ""},
     {"name": "thrust", "regex": ""},
     {"name": "drag", "regex": ""},
     {"name": "motion", "regex": ""},
     {"name": "field", "regex": ""},
-    {"name": "env_properties", "regex": ""},
+    {"name": "field_update", "regex": ""},
 ]
 
 

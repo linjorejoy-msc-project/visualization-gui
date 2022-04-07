@@ -29,10 +29,8 @@ def recv_msg(participant_socket: socket.socket) -> str:
     while True:
         len_str = participant_socket.recv(HEADERSIZE)
         if len_str:
-            print(f"{len_str=}")
             msg_len = int(len_str)
             return_str = participant_socket.recv(msg_len).decode("utf-8")
-            print(return_str)
             if return_str:
                 return return_str
 

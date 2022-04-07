@@ -1,719 +1,151 @@
-INFO       2022-04-07 00:26:59,891: Started Instantiating
-INFO       2022-04-07 00:26:59,893: {'name': 'fuel_flow', 'regex': ''} conveted to object
-INFO       2022-04-07 00:26:59,893: {'name': 'thrust_change', 'regex': ''} conveted to object
-INFO       2022-04-07 00:26:59,894: {'name': 'thrust', 'regex': ''} conveted to object
-INFO       2022-04-07 00:26:59,894: {'name': 'drag', 'regex': ''} conveted to object
-INFO       2022-04-07 00:26:59,894: {'name': 'motion', 'regex': ''} conveted to object
-INFO       2022-04-07 00:26:59,894: {'name': 'field', 'regex': ''} conveted to object
-INFO       2022-04-07 00:26:59,895: {'name': 'env_properties', 'regex': ''} conveted to object
-INFO       2022-04-07 00:26:59,895: start_server_listening thread created and started
-INFO       2022-04-07 00:26:59,897: start_server_listening while loop started
-INFO       2022-04-07 00:26:59,898: 
-
-
-
-
-INFO       2022-04-07 00:26:59,898: --------------------
-INFO       2022-04-07 00:27:05,384: Found ('172.24.96.1', 58088): <socket.socket fd=516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58088)>
-INFO       2022-04-07 00:27:05,385: Request Config from ('172.24.96.1', 58088)
-INFO       2022-04-07 00:27:05,388: Received Config string from ('172.24.96.1', 58088)
- {"id": "CLIENT_5", "name": "field", "subscribed_topics": ["field_update"], "published_topics": ["field"], "constants_required": [], "variables_subscribed": []}
-INFO       2022-04-07 00:27:05,388: Instantiating this Participant
-INFO       2022-04-07 00:27:05,388: ('172.24.96.1', 58088): Creating this participant Object
-INFO       2022-04-07 00:27:05,388: Thread created for ('172.24.96.1', 58088) = field
-INFO       2022-04-07 00:27:05,389: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:27:05,389: Analysis Started
-INFO       2022-04-07 00:27:05,389: Participant Field should be Received participant_obj.config_data.name='field'
-INFO       2022-04-07 00:27:05,389: ('172.24.96.1', 58088) waiting for reply to start Analysis
-INFO       2022-04-07 00:27:05,389: Sending to field the literal 'CONSTANTS' as :b'9    CONSTANTS'
-INFO       2022-04-07 00:27:05,392: Constants should be received constants_str='{"timestepSize": 1, "totalTimesteps": 500, "requiredThrust": 123191000.0, "dragCoefficient": 0.75, "rocketTotalMass": 7982000, "rocketUnfuelledMass": 431000, "initialRocketOFMass": 7551000, "O2FRatio": 6, "initialOxidiserMass": 6472285.714285715, "initialFuelMass": 1078714.2857142857, "rocketBodyDiameter": 21.3, "rocketFrontalArea": 1425.3091710071535, "specificImpulse": 410, "gravitationalAcceleration": 9.81, "initialRequiredMassFlowRate": 30628.52738619129}'
-INFO       2022-04-07 00:27:05,392: participant_obj.config_data.name='field' ran and constants_set=True
-INFO       2022-04-07 00:27:06,403: field waiting to start analysis
-INFO       2022-04-07 00:27:07,408: field waiting to start analysis
-INFO       2022-04-07 00:27:08,410: field waiting to start analysis
-INFO       2022-04-07 00:27:09,417: field waiting to start analysis
-INFO       2022-04-07 00:27:10,419: field waiting to start analysis
-INFO       2022-04-07 00:27:10,419: ('172.24.96.1', 58088) stopped requesting
-INFO       2022-04-07 00:27:10,419: 
-
-
-
-
-INFO       2022-04-07 00:27:10,419: --------------------
-INFO       2022-04-07 00:27:10,420: Found ('172.24.96.1', 58089): <socket.socket fd=524, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58089)>
-INFO       2022-04-07 00:27:10,420: Request Config from ('172.24.96.1', 58089)
-INFO       2022-04-07 00:27:10,422: Received Config string from ('172.24.96.1', 58089)
- {"id": "CLIENT_1", "name": "fuel_tank", "subscribed_topics": ["thrust", "field"], "published_topics": ["fuel_flow"], "constants_required": ["specificImpulse", "gravitationalAcceleration", "O2FRatio", "initialOxidiserMass", "initialFuelMass", "rocketTotalMass", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:27:10,422: Instantiating this Participant
-INFO       2022-04-07 00:27:10,422: ('172.24.96.1', 58089): Creating this participant Object
-INFO       2022-04-07 00:27:10,423: Thread created for ('172.24.96.1', 58089) = fuel_tank
-INFO       2022-04-07 00:27:10,423: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:27:10,423: participant_obj.config_data.name='fuel_tank' ran and constants_set=True
-INFO       2022-04-07 00:27:10,423: Send constants to : fuel_tank
-INFO       2022-04-07 00:27:10,423: Analysis Started
-INFO       2022-04-07 00:27:10,423: ('172.24.96.1', 58089) waiting for reply to start Analysis
-INFO       2022-04-07 00:27:10,424: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:27:10,424: Sending to fuel_tank the constants dictionary
-b'225  {"specificImpulse": 410, "gravitationalAcceleration": 9.81, "O2FRatio": 6, "initialOxidiserMass": 6472285.714285715, "initialFuelMass": 1078714.2857142857, "rocketTotalMass": 7982000, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:27:11,427: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:11,427: field waiting to start analysis
-INFO       2022-04-07 00:27:12,436: field waiting to start analysis
-INFO       2022-04-07 00:27:12,436: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:13,451: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:13,451: field waiting to start analysis
-INFO       2022-04-07 00:27:14,462: field waiting to start analysis
-INFO       2022-04-07 00:27:14,462: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:15,477: field waiting to start analysis
-INFO       2022-04-07 00:27:15,477: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:15,477: ('172.24.96.1', 58089) stopped requesting
-INFO       2022-04-07 00:27:15,477: 
-
-
-
-
-INFO       2022-04-07 00:27:15,477: --------------------
-INFO       2022-04-07 00:27:15,477: Found ('172.24.96.1', 58091): <socket.socket fd=532, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58091)>
-INFO       2022-04-07 00:27:15,478: Request Config from ('172.24.96.1', 58091)
-INFO       2022-04-07 00:27:15,480: Received Config string from ('172.24.96.1', 58091)
- {"id": "CLIENT_2", "name": "engine", "subscribed_topics": ["fuel_flow", "field"], "published_topics": ["thrust"], "constants_required": ["requiredThrust", "specificImpulse", "gravitationalAcceleration", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:27:15,480: Instantiating this Participant
-INFO       2022-04-07 00:27:15,480: ('172.24.96.1', 58091): Creating this participant Object
-INFO       2022-04-07 00:27:15,480: Thread created for ('172.24.96.1', 58091) = engine
-INFO       2022-04-07 00:27:15,481: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:27:15,481: participant_obj.config_data.name='engine' ran and constants_set=True
-INFO       2022-04-07 00:27:15,481: Send constants to : engine
-INFO       2022-04-07 00:27:15,481: Analysis Started
-INFO       2022-04-07 00:27:15,481: ('172.24.96.1', 58091) waiting for reply to start Analysis
-INFO       2022-04-07 00:27:15,482: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:27:15,482: Sending to engine the constants dictionary
-b'132  {"requiredThrust": 123191000.0, "specificImpulse": 410, "gravitationalAcceleration": 9.81, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:27:16,484: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:16,484: engine waiting to start analysis
-INFO       2022-04-07 00:27:16,484: field waiting to start analysis
-INFO       2022-04-07 00:27:17,499: field waiting to start analysis
-INFO       2022-04-07 00:27:17,499: engine waiting to start analysis
-INFO       2022-04-07 00:27:17,500: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:18,513: engine waiting to start analysis
-INFO       2022-04-07 00:27:18,513: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:18,514: field waiting to start analysis
-INFO       2022-04-07 00:27:19,516: field waiting to start analysis
-INFO       2022-04-07 00:27:19,516: engine waiting to start analysis
-INFO       2022-04-07 00:27:19,516: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:20,483: ('172.24.96.1', 58091) stopped requesting
-INFO       2022-04-07 00:27:20,483: 
-
-
-
-
-INFO       2022-04-07 00:27:20,483: --------------------
-INFO       2022-04-07 00:27:20,484: Found ('172.24.96.1', 58092): <socket.socket fd=144, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58092)>
-INFO       2022-04-07 00:27:20,484: Request Config from ('172.24.96.1', 58092)
-INFO       2022-04-07 00:27:20,485: Received Config string from ('172.24.96.1', 58092)
- {"id": "CLIENT_3", "name": "motion", "subscribed_topics": ["drag", "thrust", "fuel_flow", "field"], "published_topics": ["motion"], "constants_required": ["gravitationalAcceleration", "requiredThrust", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:27:20,486: Instantiating this Participant
-INFO       2022-04-07 00:27:20,486: ('172.24.96.1', 58092): Creating this participant Object
-INFO       2022-04-07 00:27:20,486: Thread created for ('172.24.96.1', 58092) = motion
-INFO       2022-04-07 00:27:20,486: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:27:20,487: Analysis Started
-INFO       2022-04-07 00:27:20,487: participant_obj.config_data.name='motion' ran and constants_set=True
-INFO       2022-04-07 00:27:20,487: ('172.24.96.1', 58092) waiting for reply to start Analysis
-INFO       2022-04-07 00:27:20,487: Send constants to : motion
-INFO       2022-04-07 00:27:20,488: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:27:20,488: Sending to motion the constants dictionary
-b'108  {"gravitationalAcceleration": 9.81, "requiredThrust": 123191000.0, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:27:20,530: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:20,530: engine waiting to start analysis
-INFO       2022-04-07 00:27:20,530: field waiting to start analysis
-INFO       2022-04-07 00:27:21,498: motion waiting to start analysis
-INFO       2022-04-07 00:27:21,545: engine waiting to start analysis
-INFO       2022-04-07 00:27:21,545: field waiting to start analysis
-INFO       2022-04-07 00:27:21,545: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:22,513: motion waiting to start analysis
-INFO       2022-04-07 00:27:22,546: engine waiting to start analysis
-INFO       2022-04-07 00:27:22,561: field waiting to start analysis
-INFO       2022-04-07 00:27:22,561: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:23,525: motion waiting to start analysis
-INFO       2022-04-07 00:27:23,556: engine waiting to start analysis
-INFO       2022-04-07 00:27:23,573: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:23,573: field waiting to start analysis
-INFO       2022-04-07 00:27:24,536: motion waiting to start analysis
-INFO       2022-04-07 00:27:24,569: engine waiting to start analysis
-INFO       2022-04-07 00:27:24,585: field waiting to start analysis
-INFO       2022-04-07 00:27:24,585: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:25,492: ('172.24.96.1', 58092) stopped requesting
-INFO       2022-04-07 00:27:25,492: 
-
-
-
-
-INFO       2022-04-07 00:27:25,492: --------------------
-INFO       2022-04-07 00:27:25,493: Found ('172.24.96.1', 58094): <socket.socket fd=572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58094)>
-INFO       2022-04-07 00:27:25,493: Request Config from ('172.24.96.1', 58094)
-INFO       2022-04-07 00:27:25,501: Received Config string from ('172.24.96.1', 58094)
- {"id": "CLIENT_4", "name": "aerodynamics", "subscribed_topics": ["motion", "field"], "published_topics": ["drag", "field_update"], "constants_required": ["dragCoefficient", "rocketFrontalArea", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:27:25,501: Instantiating this Participant
-INFO       2022-04-07 00:27:25,501: ('172.24.96.1', 58094): Creating this participant Object
-INFO       2022-04-07 00:27:25,501: Thread created for ('172.24.96.1', 58094) = aerodynamics
-INFO       2022-04-07 00:27:25,502: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:27:25,502: Analysis Started
-INFO       2022-04-07 00:27:25,503: ('172.24.96.1', 58094) waiting for reply to start Analysis
-INFO       2022-04-07 00:27:25,503: participant_obj.config_data.name='aerodynamics' ran and constants_set=True
-INFO       2022-04-07 00:27:25,504: Send constants to : aerodynamics
-INFO       2022-04-07 00:27:25,505: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:27:25,506: Sending to aerodynamics the constants dictionary
-b'108  {"dragCoefficient": 0.75, "rocketFrontalArea": 1425.3091710071535, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:27:25,547: motion waiting to start analysis
-INFO       2022-04-07 00:27:25,579: engine waiting to start analysis
-INFO       2022-04-07 00:27:25,594: field waiting to start analysis
-INFO       2022-04-07 00:27:25,594: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:26,510: aerodynamics waiting to start analysis
-INFO       2022-04-07 00:27:26,558: motion waiting to start analysis
-INFO       2022-04-07 00:27:26,590: engine waiting to start analysis
-INFO       2022-04-07 00:27:26,606: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:26,606: field waiting to start analysis
-INFO       2022-04-07 00:27:27,522: aerodynamics waiting to start analysis
-INFO       2022-04-07 00:27:27,568: motion waiting to start analysis
-INFO       2022-04-07 00:27:27,599: engine waiting to start analysis
-INFO       2022-04-07 00:27:27,615: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:27:27,616: field waiting to start analysis
-INFO       2022-04-07 00:27:28,061: start_server_listening while loop ended
-INFO       2022-04-07 00:27:28,535: Analysis started and the message :
-b'5    START'
-was sent to aerodynamics
-INFO       2022-04-07 00:27:28,535: ####################
-INFO       2022-04-07 00:27:28,535: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:27:28,535: ####################
-INFO       2022-04-07 00:27:28,536: Analysis while loop started for aerodynamics
-INFO       2022-04-07 00:27:28,538: aerodynamics:-info='drag                     {"drag": 0}'
-INFO       2022-04-07 00:27:28,538: aerodynamics send drag                     {"drag": 0} and its topic recognized as topic='drag'
-INFO       2022-04-07 00:27:28,538: For topic='drag' found topic_obj: topic_obj.topic_name='drag'
-DEBUG      2022-04-07 00:27:28,538: format_msg_with_header(info)=b'36   drag                     {"drag": 0}'
-sent to motion
-INFO       2022-04-07 00:27:28,582: Analysis started and the message :
-b'5    START'
-was sent to motion
-INFO       2022-04-07 00:27:28,582: ####################
-INFO       2022-04-07 00:27:28,582: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:27:28,582: ####################
-INFO       2022-04-07 00:27:28,582: Analysis while loop started for motion
-INFO       2022-04-07 00:27:28,613: Analysis started and the message :
-b'5    START'
-was sent to engine
-INFO       2022-04-07 00:27:28,613: ####################
-INFO       2022-04-07 00:27:28,613: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:27:28,614: ####################
-INFO       2022-04-07 00:27:28,614: Analysis while loop started for engine
-INFO       2022-04-07 00:27:28,615: engine:-info='thrust                   {"currentThrust": 123191000.0}'
-INFO       2022-04-07 00:27:28,616: engine send thrust                   {"currentThrust": 123191000.0} and its topic recognized as topic='thrust'
-INFO       2022-04-07 00:27:28,616: For topic='thrust' found topic_obj: topic_obj.topic_name='thrust'
-DEBUG      2022-04-07 00:27:28,616: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
-sent to fuel_tank
-DEBUG      2022-04-07 00:27:28,616: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
-sent to motion
-INFO       2022-04-07 00:27:28,629: Analysis started and the message :
-b'5    START'
-was sent to field
-INFO       2022-04-07 00:27:28,629: Analysis started and the message :
-b'5    START'
-was sent to fuel_tank
-INFO       2022-04-07 00:27:28,629: ####################
-INFO       2022-04-07 00:27:28,629: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:27:28,630: ####################
-INFO       2022-04-07 00:27:28,629: ####################
-INFO       2022-04-07 00:27:28,630: Analysis while loop started for field
-INFO       2022-04-07 00:27:28,630: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:27:28,630: ####################
-INFO       2022-04-07 00:27:28,630: Analysis while loop started for fuel_tank
-INFO       2022-04-07 00:27:28,632: field:-info='field                    {"currentTimestep": 0}'
-INFO       2022-04-07 00:27:28,632: field send field                    {"currentTimestep": 0} and its topic recognized as topic='field'
-INFO       2022-04-07 00:27:28,632: For topic='field' found topic_obj: topic_obj.topic_name='field'
-DEBUG      2022-04-07 00:27:28,632: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
-sent to fuel_tank
-DEBUG      2022-04-07 00:27:28,632: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
-sent to engine
-DEBUG      2022-04-07 00:27:28,632: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
-sent to motion
-DEBUG      2022-04-07 00:27:28,633: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
-sent to aerodynamics
-INFO       2022-04-07 00:47:56,083: Started Instantiating
-INFO       2022-04-07 00:47:56,084: {'name': 'fuel_flow', 'regex': ''} conveted to object
-INFO       2022-04-07 00:47:56,084: {'name': 'thrust_change', 'regex': ''} conveted to object
-INFO       2022-04-07 00:47:56,084: {'name': 'thrust', 'regex': ''} conveted to object
-INFO       2022-04-07 00:47:56,084: {'name': 'drag', 'regex': ''} conveted to object
-INFO       2022-04-07 00:47:56,085: {'name': 'motion', 'regex': ''} conveted to object
-INFO       2022-04-07 00:47:56,085: {'name': 'field', 'regex': ''} conveted to object
-INFO       2022-04-07 00:47:56,085: {'name': 'env_properties', 'regex': ''} conveted to object
-INFO       2022-04-07 00:47:56,085: start_server_listening thread created and started
-INFO       2022-04-07 00:47:56,086: start_server_listening while loop started
-INFO       2022-04-07 00:47:56,086: 
-
-
-
-
-INFO       2022-04-07 00:47:56,086: --------------------
-INFO       2022-04-07 00:48:01,318: Found ('172.24.96.1', 58353): <socket.socket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58353)>
-INFO       2022-04-07 00:48:01,318: Request Config from ('172.24.96.1', 58353)
-INFO       2022-04-07 00:48:01,321: Received Config string from ('172.24.96.1', 58353)
- {"id": "CLIENT_5", "name": "field", "subscribed_topics": ["field_update"], "published_topics": ["field"], "constants_required": [], "variables_subscribed": []}
-INFO       2022-04-07 00:48:01,321: Instantiating this Participant
-INFO       2022-04-07 00:48:01,321: ('172.24.96.1', 58353): Creating this participant Object
-INFO       2022-04-07 00:48:01,321: Thread created for ('172.24.96.1', 58353) = field
-INFO       2022-04-07 00:48:01,322: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:48:01,322: Analysis Started
-INFO       2022-04-07 00:48:01,322: Participant Field should be Received participant_obj.config_data.name='field'
-INFO       2022-04-07 00:48:01,322: ('172.24.96.1', 58353) waiting for reply to start Analysis
-INFO       2022-04-07 00:48:01,322: Sending to field the literal 'CONSTANTS' as :b'9    CONSTANTS'
-INFO       2022-04-07 00:48:01,325: Constants should be received constants_str='{"timestepSize": 1, "totalTimesteps": 500, "requiredThrust": 123191000.0, "dragCoefficient": 0.75, "rocketTotalMass": 7982000, "rocketUnfuelledMass": 431000, "initialRocketOFMass": 7551000, "O2FRatio": 6, "initialOxidiserMass": 6472285.714285715, "initialFuelMass": 1078714.2857142857, "rocketBodyDiameter": 21.3, "rocketFrontalArea": 1425.3091710071535, "specificImpulse": 410, "gravitationalAcceleration": 9.81, "initialRequiredMassFlowRate": 30628.52738619129}'
-INFO       2022-04-07 00:48:01,325: participant_obj.config_data.name='field' ran and constants_set=True
-INFO       2022-04-07 00:48:02,338: field waiting to start analysis
-INFO       2022-04-07 00:48:03,344: field waiting to start analysis
-INFO       2022-04-07 00:48:04,352: field waiting to start analysis
-INFO       2022-04-07 00:48:05,361: field waiting to start analysis
-INFO       2022-04-07 00:48:06,373: field waiting to start analysis
-INFO       2022-04-07 00:48:06,373: ('172.24.96.1', 58353) stopped requesting
-INFO       2022-04-07 00:48:06,373: 
-
-
-
-
-INFO       2022-04-07 00:48:06,374: --------------------
-INFO       2022-04-07 00:48:06,374: Found ('172.24.96.1', 58354): <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58354)>
-INFO       2022-04-07 00:48:06,374: Request Config from ('172.24.96.1', 58354)
-INFO       2022-04-07 00:48:06,376: Received Config string from ('172.24.96.1', 58354)
- {"id": "CLIENT_1", "name": "fuel_tank", "subscribed_topics": ["thrust", "field"], "published_topics": ["fuel_flow"], "constants_required": ["specificImpulse", "gravitationalAcceleration", "O2FRatio", "initialOxidiserMass", "initialFuelMass", "rocketTotalMass", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:48:06,376: Instantiating this Participant
-INFO       2022-04-07 00:48:06,376: ('172.24.96.1', 58354): Creating this participant Object
-INFO       2022-04-07 00:48:06,377: Thread created for ('172.24.96.1', 58354) = fuel_tank
-INFO       2022-04-07 00:48:06,377: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:48:06,377: Analysis Started
-INFO       2022-04-07 00:48:06,377: participant_obj.config_data.name='fuel_tank' ran and constants_set=True
-INFO       2022-04-07 00:48:06,378: ('172.24.96.1', 58354) waiting for reply to start Analysis
-INFO       2022-04-07 00:48:06,378: Send constants to : fuel_tank
-INFO       2022-04-07 00:48:06,379: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:48:06,379: Sending to fuel_tank the constants dictionary
-b'225  {"specificImpulse": 410, "gravitationalAcceleration": 9.81, "O2FRatio": 6, "initialOxidiserMass": 6472285.714285715, "initialFuelMass": 1078714.2857142857, "rocketTotalMass": 7982000, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:48:07,376: field waiting to start analysis
-INFO       2022-04-07 00:48:07,391: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:08,386: field waiting to start analysis
-INFO       2022-04-07 00:48:08,396: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:09,404: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:09,404: field waiting to start analysis
-INFO       2022-04-07 00:48:10,416: field waiting to start analysis
-INFO       2022-04-07 00:48:10,416: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:11,410: ('172.24.96.1', 58354) stopped requesting
-INFO       2022-04-07 00:48:11,411: 
-
-
-
-
-INFO       2022-04-07 00:48:11,411: --------------------
-INFO       2022-04-07 00:48:11,411: Found ('172.24.96.1', 58355): <socket.socket fd=536, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58355)>
-INFO       2022-04-07 00:48:11,411: Request Config from ('172.24.96.1', 58355)
-INFO       2022-04-07 00:48:11,413: Received Config string from ('172.24.96.1', 58355)
- {"id": "CLIENT_2", "name": "engine", "subscribed_topics": ["fuel_flow", "field"], "published_topics": ["thrust"], "constants_required": ["requiredThrust", "specificImpulse", "gravitationalAcceleration", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:48:11,414: Instantiating this Participant
-INFO       2022-04-07 00:48:11,414: ('172.24.96.1', 58355): Creating this participant Object
-INFO       2022-04-07 00:48:11,414: Thread created for ('172.24.96.1', 58355) = engine
-INFO       2022-04-07 00:48:11,414: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:48:11,415: Analysis Started
-INFO       2022-04-07 00:48:11,415: participant_obj.config_data.name='engine' ran and constants_set=True
-INFO       2022-04-07 00:48:11,415: ('172.24.96.1', 58355) waiting for reply to start Analysis
-INFO       2022-04-07 00:48:11,415: Send constants to : engine
-INFO       2022-04-07 00:48:11,416: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:48:11,417: Sending to engine the constants dictionary
-b'132  {"requiredThrust": 123191000.0, "specificImpulse": 410, "gravitationalAcceleration": 9.81, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:48:11,427: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:11,428: field waiting to start analysis
-INFO       2022-04-07 00:48:12,433: engine waiting to start analysis
-INFO       2022-04-07 00:48:12,433: field waiting to start analysis
-INFO       2022-04-07 00:48:12,433: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:13,439: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:13,439: engine waiting to start analysis
-INFO       2022-04-07 00:48:13,439: field waiting to start analysis
-INFO       2022-04-07 00:48:14,445: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:14,445: engine waiting to start analysis
-INFO       2022-04-07 00:48:14,445: field waiting to start analysis
-INFO       2022-04-07 00:48:15,450: field waiting to start analysis
-INFO       2022-04-07 00:48:15,450: engine waiting to start analysis
-INFO       2022-04-07 00:48:15,450: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:16,447: ('172.24.96.1', 58355) stopped requesting
-INFO       2022-04-07 00:48:16,447: 
-
-
-
-
-INFO       2022-04-07 00:48:16,448: --------------------
-INFO       2022-04-07 00:48:16,448: Found ('172.24.96.1', 58357): <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58357)>
-INFO       2022-04-07 00:48:16,448: Request Config from ('172.24.96.1', 58357)
-INFO       2022-04-07 00:48:16,450: Received Config string from ('172.24.96.1', 58357)
- {"id": "CLIENT_3", "name": "motion", "subscribed_topics": ["drag", "thrust", "fuel_flow", "field"], "published_topics": ["motion"], "constants_required": ["gravitationalAcceleration", "requiredThrust", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:48:16,450: Instantiating this Participant
-INFO       2022-04-07 00:48:16,450: ('172.24.96.1', 58357): Creating this participant Object
-INFO       2022-04-07 00:48:16,450: Thread created for ('172.24.96.1', 58357) = motion
-INFO       2022-04-07 00:48:16,451: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:48:16,451: Analysis Started
-INFO       2022-04-07 00:48:16,451: participant_obj.config_data.name='motion' ran and constants_set=True
-INFO       2022-04-07 00:48:16,451: ('172.24.96.1', 58357) waiting for reply to start Analysis
-INFO       2022-04-07 00:48:16,451: Send constants to : motion
-INFO       2022-04-07 00:48:16,452: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:48:16,453: Sending to motion the constants dictionary
-b'108  {"gravitationalAcceleration": 9.81, "requiredThrust": 123191000.0, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:48:16,463: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:16,464: field waiting to start analysis
-INFO       2022-04-07 00:48:16,464: engine waiting to start analysis
-INFO       2022-04-07 00:48:17,459: motion waiting to start analysis
-INFO       2022-04-07 00:48:17,473: field waiting to start analysis
-INFO       2022-04-07 00:48:17,473: engine waiting to start analysis
-INFO       2022-04-07 00:48:17,473: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:18,473: motion waiting to start analysis
-INFO       2022-04-07 00:48:18,488: field waiting to start analysis
-INFO       2022-04-07 00:48:18,488: engine waiting to start analysis
-INFO       2022-04-07 00:48:18,488: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:19,480: motion waiting to start analysis
-INFO       2022-04-07 00:48:19,496: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:19,496: engine waiting to start analysis
-INFO       2022-04-07 00:48:19,496: field waiting to start analysis
-INFO       2022-04-07 00:48:20,503: motion waiting to start analysis
-INFO       2022-04-07 00:48:20,508: field waiting to start analysis
-INFO       2022-04-07 00:48:20,508: engine waiting to start analysis
-INFO       2022-04-07 00:48:20,508: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:21,476: ('172.24.96.1', 58357) stopped requesting
-INFO       2022-04-07 00:48:21,476: 
-
-
-
-
-INFO       2022-04-07 00:48:21,476: --------------------
-INFO       2022-04-07 00:48:21,477: Found ('172.24.96.1', 58358): <socket.socket fd=572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58358)>
-INFO       2022-04-07 00:48:21,477: Request Config from ('172.24.96.1', 58358)
-INFO       2022-04-07 00:48:21,479: Received Config string from ('172.24.96.1', 58358)
- {"id": "CLIENT_4", "name": "aerodynamics", "subscribed_topics": ["motion", "field"], "published_topics": ["drag", "field_update"], "constants_required": ["dragCoefficient", "rocketFrontalArea", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:48:21,479: Instantiating this Participant
-INFO       2022-04-07 00:48:21,479: ('172.24.96.1', 58358): Creating this participant Object
-INFO       2022-04-07 00:48:21,479: Thread created for ('172.24.96.1', 58358) = aerodynamics
-INFO       2022-04-07 00:48:21,479: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:48:21,480: Analysis Started
-INFO       2022-04-07 00:48:21,480: participant_obj.config_data.name='aerodynamics' ran and constants_set=True
-INFO       2022-04-07 00:48:21,480: ('172.24.96.1', 58358) waiting for reply to start Analysis
-INFO       2022-04-07 00:48:21,480: Send constants to : aerodynamics
-INFO       2022-04-07 00:48:21,481: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:48:21,481: Sending to aerodynamics the constants dictionary
-b'108  {"dragCoefficient": 0.75, "rocketFrontalArea": 1425.3091710071535, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:48:21,508: motion waiting to start analysis
-INFO       2022-04-07 00:48:21,524: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:48:21,524: field waiting to start analysis
-INFO       2022-04-07 00:48:21,524: engine waiting to start analysis
-INFO       2022-04-07 00:48:22,485: aerodynamics waiting to start analysis
-INFO       2022-04-07 00:48:22,486: start_server_listening while loop ended
-INFO       2022-04-07 00:48:22,517: Analysis started and the message :
-b'5    START'
-was sent to motion
-INFO       2022-04-07 00:48:22,517: ####################
-INFO       2022-04-07 00:48:22,517: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:48:22,517: ####################
-INFO       2022-04-07 00:48:22,517: Analysis while loop started for motion
-INFO       2022-04-07 00:48:22,533: Analysis started and the message :
-b'5    START'
-was sent to engine
-INFO       2022-04-07 00:48:22,533: Analysis started and the message :
-b'5    START'
-was sent to field
-INFO       2022-04-07 00:48:22,533: Analysis started and the message :
-b'5    START'
-was sent to fuel_tank
-INFO       2022-04-07 00:48:22,533: ####################
-INFO       2022-04-07 00:48:22,534: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:48:22,534: ####################
-INFO       2022-04-07 00:48:22,534: Analysis while loop started for engine
-INFO       2022-04-07 00:48:22,533: ####################
-INFO       2022-04-07 00:48:22,534: ####################
-INFO       2022-04-07 00:48:22,535: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:48:22,535: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:48:22,535: ####################
-INFO       2022-04-07 00:48:22,535: ####################
-INFO       2022-04-07 00:48:22,535: Analysis while loop started for field
-INFO       2022-04-07 00:48:22,535: Analysis while loop started for fuel_tank
-INFO       2022-04-07 00:48:22,536: engine:-info='thrust                   {"currentThrust": 123191000.0}'
-INFO       2022-04-07 00:48:22,537: engine send thrust                   {"currentThrust": 123191000.0} and its topic recognized as topic='thrust'
-INFO       2022-04-07 00:48:22,537: For topic='thrust' found topic_obj: topic_obj.topic_name='thrust'
-DEBUG      2022-04-07 00:48:22,537: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
-sent to fuel_tank
-INFO       2022-04-07 00:48:22,541: field:-info='field                    {"currentTimestep": 0}'
-INFO       2022-04-07 00:48:22,541: field send field                    {"currentTimestep": 0} and its topic recognized as topic='field'
-INFO       2022-04-07 00:48:22,541: For topic='field' found topic_obj: topic_obj.topic_name='field'
-DEBUG      2022-04-07 00:48:22,541: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
-sent to fuel_tank
-INFO       2022-04-07 00:48:23,497: Analysis started and the message :
-b'5    START'
-was sent to aerodynamics
-INFO       2022-04-07 00:48:23,497: ####################
-INFO       2022-04-07 00:48:23,497: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:48:23,497: ####################
-INFO       2022-04-07 00:48:23,498: Analysis while loop started for aerodynamics
-INFO       2022-04-07 00:48:23,499: aerodynamics:-info='drag                     {"drag": 0}'
-INFO       2022-04-07 00:48:23,500: aerodynamics send drag                     {"drag": 0} and its topic recognized as topic='drag'
-INFO       2022-04-07 00:48:23,500: For topic='drag' found topic_obj: topic_obj.topic_name='drag'
-DEBUG      2022-04-07 00:48:23,500: format_msg_with_header(info)=b'36   drag                     {"drag": 0}'
-sent to motion
-INFO       2022-04-07 00:51:13,093: Started Instantiating
-INFO       2022-04-07 00:51:13,095: {'name': 'fuel_flow', 'regex': ''} conveted to object
-INFO       2022-04-07 00:51:13,096: {'name': 'thrust_change', 'regex': ''} conveted to object
-INFO       2022-04-07 00:51:13,096: {'name': 'thrust', 'regex': ''} conveted to object
-INFO       2022-04-07 00:51:13,096: {'name': 'drag', 'regex': ''} conveted to object
-INFO       2022-04-07 00:51:13,096: {'name': 'motion', 'regex': ''} conveted to object
-INFO       2022-04-07 00:51:13,096: {'name': 'field', 'regex': ''} conveted to object
-INFO       2022-04-07 00:51:13,096: {'name': 'env_properties', 'regex': ''} conveted to object
-INFO       2022-04-07 00:51:13,096: start_server_listening thread created and started
-INFO       2022-04-07 00:51:13,097: start_server_listening while loop started
-INFO       2022-04-07 00:51:13,098: 
-
-
-
-
-INFO       2022-04-07 00:51:13,098: --------------------
-INFO       2022-04-07 00:51:20,494: Found ('172.24.96.1', 58398): <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58398)>
-INFO       2022-04-07 00:51:20,494: Request Config from ('172.24.96.1', 58398)
-INFO       2022-04-07 00:51:20,497: Received Config string from ('172.24.96.1', 58398)
- {"id": "CLIENT_5", "name": "field", "subscribed_topics": ["field_update"], "published_topics": ["field"], "constants_required": [], "variables_subscribed": []}
-INFO       2022-04-07 00:51:20,497: Instantiating this Participant
-INFO       2022-04-07 00:51:20,497: ('172.24.96.1', 58398): Creating this participant Object
-INFO       2022-04-07 00:51:20,497: Thread created for ('172.24.96.1', 58398) = field
-INFO       2022-04-07 00:51:20,498: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:51:20,498: Analysis Started
-INFO       2022-04-07 00:51:20,498: Participant Field should be Received participant_obj.config_data.name='field'
-INFO       2022-04-07 00:51:20,498: ('172.24.96.1', 58398) waiting for reply to start Analysis
-INFO       2022-04-07 00:51:20,498: Sending to field the literal 'CONSTANTS' as :b'9    CONSTANTS'
-INFO       2022-04-07 00:51:20,501: Constants should be received constants_str='{"timestepSize": 1, "totalTimesteps": 500, "requiredThrust": 123191000.0, "dragCoefficient": 0.75, "rocketTotalMass": 7982000, "rocketUnfuelledMass": 431000, "initialRocketOFMass": 7551000, "O2FRatio": 6, "initialOxidiserMass": 6472285.714285715, "initialFuelMass": 1078714.2857142857, "rocketBodyDiameter": 21.3, "rocketFrontalArea": 1425.3091710071535, "specificImpulse": 410, "gravitationalAcceleration": 9.81, "initialRequiredMassFlowRate": 30628.52738619129}'
-INFO       2022-04-07 00:51:20,501: participant_obj.config_data.name='field' ran and constants_set=True
-INFO       2022-04-07 00:51:21,511: field waiting to start analysis
-INFO       2022-04-07 00:51:22,513: field waiting to start analysis
-INFO       2022-04-07 00:51:23,519: field waiting to start analysis
-INFO       2022-04-07 00:51:24,528: field waiting to start analysis
-INFO       2022-04-07 00:51:25,486: ('172.24.96.1', 58398) stopped requesting
-INFO       2022-04-07 00:51:25,487: 
-
-
-
-
-INFO       2022-04-07 00:51:25,487: --------------------
-INFO       2022-04-07 00:51:25,488: Found ('172.24.96.1', 58399): <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58399)>
-INFO       2022-04-07 00:51:25,488: Request Config from ('172.24.96.1', 58399)
-INFO       2022-04-07 00:51:25,492: Received Config string from ('172.24.96.1', 58399)
- {"id": "CLIENT_1", "name": "fuel_tank", "subscribed_topics": ["thrust", "field"], "published_topics": ["fuel_flow"], "constants_required": ["specificImpulse", "gravitationalAcceleration", "O2FRatio", "initialOxidiserMass", "initialFuelMass", "rocketTotalMass", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:51:25,493: Instantiating this Participant
-INFO       2022-04-07 00:51:25,493: ('172.24.96.1', 58399): Creating this participant Object
-INFO       2022-04-07 00:51:25,493: Thread created for ('172.24.96.1', 58399) = fuel_tank
-INFO       2022-04-07 00:51:25,494: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:51:25,494: Analysis Started
-INFO       2022-04-07 00:51:25,494: participant_obj.config_data.name='fuel_tank' ran and constants_set=True
-INFO       2022-04-07 00:51:25,495: ('172.24.96.1', 58399) waiting for reply to start Analysis
-INFO       2022-04-07 00:51:25,495: Send constants to : fuel_tank
-INFO       2022-04-07 00:51:25,496: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:51:25,497: Sending to fuel_tank the constants dictionary
-b'225  {"specificImpulse": 410, "gravitationalAcceleration": 9.81, "O2FRatio": 6, "initialOxidiserMass": 6472285.714285715, "initialFuelMass": 1078714.2857142857, "rocketTotalMass": 7982000, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:51:25,535: field waiting to start analysis
-INFO       2022-04-07 00:51:26,510: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:26,541: field waiting to start analysis
-INFO       2022-04-07 00:51:27,525: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:27,560: field waiting to start analysis
-INFO       2022-04-07 00:51:28,531: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:28,563: field waiting to start analysis
-INFO       2022-04-07 00:51:29,620: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:29,622: field waiting to start analysis
-INFO       2022-04-07 00:51:30,491: ('172.24.96.1', 58399) stopped requesting
-INFO       2022-04-07 00:51:30,492: 
-
-
-
-
-INFO       2022-04-07 00:51:30,493: --------------------
-INFO       2022-04-07 00:51:30,496: Found ('172.24.96.1', 58400): <socket.socket fd=532, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 58400)>
-INFO       2022-04-07 00:51:30,497: Request Config from ('172.24.96.1', 58400)
-INFO       2022-04-07 00:51:30,521: Received Config string from ('172.24.96.1', 58400)
- {"id": "CLIENT_2", "name": "engine", "subscribed_topics": ["fuel_flow", "field"], "published_topics": ["thrust"], "constants_required": ["requiredThrust", "specificImpulse", "gravitationalAcceleration", "timestepSize", "totalTimesteps"], "variables_subscribed": []}
-INFO       2022-04-07 00:51:30,522: Instantiating this Participant
-INFO       2022-04-07 00:51:30,523: ('172.24.96.1', 58400): Creating this participant Object
-INFO       2022-04-07 00:51:30,525: Thread created for ('172.24.96.1', 58400) = engine
-INFO       2022-04-07 00:51:30,544: Inside handle Participant with analysis_started=False
-INFO       2022-04-07 00:51:30,545: Analysis Started
-INFO       2022-04-07 00:51:30,547: ('172.24.96.1', 58400) waiting for reply to start Analysis
-INFO       2022-04-07 00:51:30,546: participant_obj.config_data.name='engine' ran and constants_set=True
-INFO       2022-04-07 00:51:30,549: Send constants to : engine
-INFO       2022-04-07 00:51:30,556: Waiting for requesting constants and received msg='CONSTANTS'
-INFO       2022-04-07 00:51:30,557: Sending to engine the constants dictionary
-b'132  {"requiredThrust": 123191000.0, "specificImpulse": 410, "gravitationalAcceleration": 9.81, "timestepSize": 1, "totalTimesteps": 500}'
-INFO       2022-04-07 00:51:30,633: field waiting to start analysis
-INFO       2022-04-07 00:51:30,634: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:31,562: engine waiting to start analysis
-INFO       2022-04-07 00:51:31,640: field waiting to start analysis
-INFO       2022-04-07 00:51:31,641: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:32,572: engine waiting to start analysis
-INFO       2022-04-07 00:51:32,649: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:32,650: field waiting to start analysis
-INFO       2022-04-07 00:51:33,585: engine waiting to start analysis
-INFO       2022-04-07 00:51:33,663: field waiting to start analysis
-INFO       2022-04-07 00:51:33,664: fuel_tank waiting to start analysis
-INFO       2022-04-07 00:51:33,986: start_server_listening while loop ended
-INFO       2022-04-07 00:51:34,599: Analysis started and the message :
-b'5    START'
-was sent to engine
-INFO       2022-04-07 00:51:34,601: ####################
-INFO       2022-04-07 00:51:34,602: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:51:34,605: ####################
-INFO       2022-04-07 00:51:34,606: Analysis while loop started for engine
-INFO       2022-04-07 00:51:34,614: engine:-info='thrust                   {"currentThrust": 123191000.0}'
-INFO       2022-04-07 00:51:34,615: engine send thrust                   {"currentThrust": 123191000.0} and its topic recognized as topic='thrust'
-INFO       2022-04-07 00:51:34,616: For topic='thrust' found topic_obj: topic_obj.topic_name='thrust'
-DEBUG      2022-04-07 00:51:34,617: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
-sent to fuel_tank
-INFO       2022-04-07 00:51:34,677: Analysis started and the message :
-b'5    START'
-was sent to fuel_tank
-INFO       2022-04-07 00:51:34,678: Analysis started and the message :
-b'5    START'
-was sent to field
-INFO       2022-04-07 00:51:34,680: ####################
-INFO       2022-04-07 00:51:34,684: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:51:34,685: ####################
-INFO       2022-04-07 00:51:34,687: Analysis while loop started for field
-INFO       2022-04-07 00:51:34,688: ####################
-INFO       2022-04-07 00:51:34,689: 
-
-
-
-
-
-
-
-
-
-
-INFO       2022-04-07 00:51:34,690: ####################
-INFO       2022-04-07 00:51:34,692: Analysis while loop started for fuel_tank
-INFO       2022-04-07 00:51:34,711: field:-info='field                    {"currentTimestep": 0}'
-INFO       2022-04-07 00:51:34,713: field send field                    {"currentTimestep": 0} and its topic recognized as topic='field'
-INFO       2022-04-07 00:51:34,714: For topic='field' found topic_obj: topic_obj.topic_name='field'
-DEBUG      2022-04-07 00:51:34,715: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
-sent to fuel_tank
-DEBUG      2022-04-07 00:51:34,716: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
-sent to engine
+INFO       2022-04-07 23:07:47,031: {'name': 'fuel_flow', 'regex': ''} conveted to object
+INFO       2022-04-07 23:07:47,032: {'name': 'thrust', 'regex': ''} conveted to object
+INFO       2022-04-07 23:07:47,032: {'name': 'drag', 'regex': ''} conveted to object
+INFO       2022-04-07 23:07:47,032: {'name': 'motion', 'regex': ''} conveted to object
+INFO       2022-04-07 23:07:47,033: {'name': 'field', 'regex': ''} conveted to object
+INFO       2022-04-07 23:07:47,033: {'name': 'field_update', 'regex': ''} conveted to object
+INFO       2022-04-07 23:07:47,034: start_server_listening while loop started
+INFO       2022-04-07 23:07:53,428: Found ('172.24.96.1', 49454): <socket.socket fd=292, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49454)>
+INFO       2022-04-07 23:07:58,533: Found ('172.24.96.1', 49455): <socket.socket fd=524, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49455)>
+INFO       2022-04-07 23:08:03,751: Found ('172.24.96.1', 49458): <socket.socket fd=532, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49458)>
+INFO       2022-04-07 23:08:10,558: Found ('172.24.96.1', 49459): <socket.socket fd=216, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49459)>
+INFO       2022-04-07 23:08:16,227: Found ('172.24.96.1', 49461): <socket.socket fd=564, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49461)>
+INFO       2022-04-07 23:08:20,097: Analysis while loop started for motion
+INFO       2022-04-07 23:08:20,100: Analysis while loop started for field
+INFO       2022-04-07 23:08:20,106: Analysis while loop started for fuel_tank
+INFO       2022-04-07 23:08:20,114: Analysis while loop started for engine
+INFO       2022-04-07 23:08:20,127: Analysis while loop started for aerodynamics
+INFO       2022-04-07 23:08:20,136: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,157: format_msg_with_header(info)=b'36   drag                     {"drag": 0}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,185: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,222: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6446032.690811836, "currentFuelMass": 1074338.7818019725, "currentRocketTotalMass": 7951371.472613809}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,252: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,299: format_msg_with_header(info)=b'304  motion                   {"netThrust": 45188045.85365853, "currentAcceleration": 5.683050528993097, "currentVelocityDelta": 5.683050528993097, "currentVelocity": 5.683050528993097, "currentAltitudeDelta": 5.683050528993097, "currentAltitude": 5.683050528993097, "requiredThrustChange": 63.31871171298348}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,345: format_msg_with_header(info)=b'52   drag                     {"drag": 21162.87234873467}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,347: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,365: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,394: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6419779.667337958, "currentFuelMass": 1069963.2778896594, "currentRocketTotalMass": 7920742.945227617}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,431: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,564: format_msg_with_header(info)=b'308  motion                   {"netThrust": 45467348.834968336, "currentAcceleration": 5.740288398370912, "currentVelocityDelta": 5.740288398370912, "currentVelocity": 11.423338927364009, "currentAltitudeDelta": 11.423338927364009, "currentAltitude": 17.106389456357107, "requiredThrustChange": 63.09198818503923}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,616: format_msg_with_header(info)=b'52   drag                     {"drag": 85412.61213504327}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,619: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,623: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,652: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6393526.643864079, "currentFuelMass": 1065587.7739773463, "currentRocketTotalMass": 7890114.417841426}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,737: format_msg_with_header(info)=b'307  motion                   {"netThrust": 45703564.948840566, "currentAcceleration": 5.792509782303528, "currentVelocityDelta": 5.792509782303528, "currentVelocity": 17.215848709667537, "currentAltitudeDelta": 17.215848709667537, "currentAltitude": 34.32223816602465, "requiredThrustChange": 62.90024031882154}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,759: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,769: format_msg_with_header(info)=b'53   drag                     {"drag": 193675.91162581768}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,771: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 3}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,775: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 3}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,861: format_msg_with_header(info)=b'192  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6367273.620390201, "currentFuelMass": 1061212.270065033, "currentRocketTotalMass": 7859485.890455235}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,904: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,932: format_msg_with_header(info)=b'305  motion                   {"netThrust": 45895767.50300832, "currentAcceleration": 5.839538125355673, "currentVelocityDelta": 5.839538125355673, "currentVelocity": 23.05538683502321, "currentAltitudeDelta": 23.05538683502321, "currentAltitude": 57.37762500104786, "requiredThrustChange": 62.744220354564604}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,973: format_msg_with_header(info)=b'52   drag                     {"drag": 346579.3852323482}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,975: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 4}'
+sent to subscribers
+INFO       2022-04-07 23:08:20,980: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 4}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,027: format_msg_with_header(info)=b'192  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6341020.596916323, "currentFuelMass": 1056836.76615272, "currentRocketTotalMass": 7828857.3630690435}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,057: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,132: format_msg_with_header(info)=b'306  motion                   {"netThrust": 46043329.88306033, "currentAcceleration": 5.881232438881805, "currentVelocityDelta": 5.881232438881805, "currentVelocity": 28.936619273905016, "currentAltitudeDelta": 28.936619273905016, "currentAltitude": 86.31424427495287, "requiredThrustChange": 62.62443694502006}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,162: format_msg_with_header(info)=b'52   drag                     {"drag": 544436.0057446223}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,164: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 5}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,169: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 5}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,211: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6314767.573442444, "currentFuelMass": 1052461.2622404068, "currentRocketTotalMass": 7798228.835682852}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,242: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:08:21,306: format_msg_with_header(info)=b'304  motion                   {"netThrust": 46145939.1162066, "currentAcceleration": 5.917489738830655, "currentVelocityDelta": 5.917489738830655, "currentVelocity": 34.85410901273567, "currentAltitudeDelta": 34.85410901273567, "currentAltitude": 121.16835328768855, "requiredThrustChange": 62.54114414510265}'
+sent to subscribers
+INFO       2022-04-07 23:14:31,638: {'name': 'fuel_flow', 'regex': ''} conveted to object
+INFO       2022-04-07 23:14:31,639: {'name': 'thrust', 'regex': ''} conveted to object
+INFO       2022-04-07 23:14:31,639: {'name': 'drag', 'regex': ''} conveted to object
+INFO       2022-04-07 23:14:31,639: {'name': 'motion', 'regex': ''} conveted to object
+INFO       2022-04-07 23:14:31,639: {'name': 'field', 'regex': ''} conveted to object
+INFO       2022-04-07 23:14:31,639: {'name': 'field_update', 'regex': ''} conveted to object
+INFO       2022-04-07 23:14:31,640: start_server_listening while loop started
+INFO       2022-04-07 23:14:34,686: Found ('172.24.96.1', 49549): <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49549)>
+INFO       2022-04-07 23:14:39,820: Found ('172.24.96.1', 49558): <socket.socket fd=508, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49558)>
+INFO       2022-04-07 23:15:09,978: {'name': 'fuel_flow', 'regex': ''} conveted to object
+INFO       2022-04-07 23:15:09,978: {'name': 'thrust', 'regex': ''} conveted to object
+INFO       2022-04-07 23:15:09,979: {'name': 'drag', 'regex': ''} conveted to object
+INFO       2022-04-07 23:15:09,979: {'name': 'motion', 'regex': ''} conveted to object
+INFO       2022-04-07 23:15:09,979: {'name': 'field', 'regex': ''} conveted to object
+INFO       2022-04-07 23:15:09,979: {'name': 'field_update', 'regex': ''} conveted to object
+INFO       2022-04-07 23:15:09,982: start_server_listening while loop started
+INFO       2022-04-07 23:15:16,362: Found ('172.24.96.1', 49563): <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49563)>
+INFO       2022-04-07 23:15:21,945: Found ('172.24.96.1', 49566): <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49566)>
+INFO       2022-04-07 23:15:27,124: Found ('172.24.96.1', 49567): <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49567)>
+INFO       2022-04-07 23:15:32,502: Found ('172.24.96.1', 49568): <socket.socket fd=540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49568)>
+INFO       2022-04-07 23:15:40,193: Found ('172.24.96.1', 49569): <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.24.96.1', 1234), raddr=('172.24.96.1', 49569)>
+INFO       2022-04-07 23:15:43,097: Analysis while loop started for engine
+INFO       2022-04-07 23:15:43,097: Analysis while loop started for field
+INFO       2022-04-07 23:15:43,097: Analysis while loop started for motion
+INFO       2022-04-07 23:15:43,098: Analysis while loop started for fuel_tank
+INFO       2022-04-07 23:15:43,098: Analysis while loop started for aerodynamics
+INFO       2022-04-07 23:15:43,099: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,099: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,100: format_msg_with_header(info)=b'36   drag                     {"drag": 0}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,100: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6446032.690811836, "currentFuelMass": 1074338.7818019725, "currentRocketTotalMass": 7951371.472613809}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,129: format_msg_with_header(info)=b'304  motion                   {"netThrust": 45188045.85365853, "currentAcceleration": 5.683050528993097, "currentVelocityDelta": 5.683050528993097, "currentVelocity": 5.683050528993097, "currentAltitudeDelta": 5.683050528993097, "currentAltitude": 5.683050528993097, "requiredThrustChange": 63.31871171298348}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,129: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,161: format_msg_with_header(info)=b'52   drag                     {"drag": 21162.87234873467}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,161: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,161: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,193: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6419779.667337958, "currentFuelMass": 1069963.2778896594, "currentRocketTotalMass": 7920742.945227617}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,209: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,225: format_msg_with_header(info)=b'308  motion                   {"netThrust": 45467348.834968336, "currentAcceleration": 5.740288398370912, "currentVelocityDelta": 5.740288398370912, "currentVelocity": 11.423338927364009, "currentAltitudeDelta": 11.423338927364009, "currentAltitude": 17.106389456357107, "requiredThrustChange": 63.09198818503923}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,241: format_msg_with_header(info)=b'52   drag                     {"drag": 85412.61213504327}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,241: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,242: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,273: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6393526.643864079, "currentFuelMass": 1065587.7739773463, "currentRocketTotalMass": 7890114.417841426}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,289: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-07 23:15:43,321: format_msg_with_header(info)=b'307  motion                   {"netThrust": 45703564.948840566, "currentAcceleration": 5.792509782303528, "currentVelocityDelta": 5.792509782303528, "currentVelocity": 17.215848709667537, "currentAltitudeDelta": 17.215848709667537, "currentAltitude": 34.32223816602465, "requiredThrustChange": 62.90024031882154}'
+sent to subscribers
