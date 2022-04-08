@@ -149,3 +149,167 @@ INFO       2022-04-07 23:15:43,289: format_msg_with_header(info)=b'55   thrust  
 sent to subscribers
 INFO       2022-04-07 23:15:43,321: format_msg_with_header(info)=b'307  motion                   {"netThrust": 45703564.948840566, "currentAcceleration": 5.792509782303528, "currentVelocityDelta": 5.792509782303528, "currentVelocity": 17.215848709667537, "currentAltitudeDelta": 17.215848709667537, "currentAltitude": 34.32223816602465, "requiredThrustChange": 62.90024031882154}'
 sent to subscribers
+INFO       2022-04-08 11:25:16,209: {'name': 'fuel_flow', 'regex': ''} conveted to object
+INFO       2022-04-08 11:25:16,210: {'name': 'thrust', 'regex': ''} conveted to object
+INFO       2022-04-08 11:25:16,210: {'name': 'drag', 'regex': ''} conveted to object
+INFO       2022-04-08 11:25:16,210: {'name': 'motion', 'regex': ''} conveted to object
+INFO       2022-04-08 11:25:16,211: {'name': 'field', 'regex': ''} conveted to object
+INFO       2022-04-08 11:25:16,211: {'name': 'field_update', 'regex': ''} conveted to object
+INFO       2022-04-08 11:25:16,213: start_server_listening while loop started
+INFO       2022-04-08 11:25:22,576: Found ('131.231.86.164', 52609): <socket.socket fd=416, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52609)>
+INFO       2022-04-08 11:25:28,658: Found ('131.231.86.164', 52610): <socket.socket fd=436, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52610)>
+INFO       2022-04-08 11:25:33,929: Found ('131.231.86.164', 52612): <socket.socket fd=540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52612)>
+INFO       2022-04-08 11:25:39,293: Found ('131.231.86.164', 52616): <socket.socket fd=524, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52616)>
+INFO       2022-04-08 11:26:15,062: Found ('131.231.86.164', 52617): <socket.socket fd=580, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52617)>
+INFO       2022-04-08 11:26:17,148: Analysis while loop started for motion
+INFO       2022-04-08 11:26:17,149: Analysis while loop started for fuel_tank
+INFO       2022-04-08 11:26:17,149: Analysis while loop started for aerodynamics
+INFO       2022-04-08 11:26:17,149: Analysis while loop started for engine
+INFO       2022-04-08 11:26:17,150: Analysis while loop started for field
+INFO       2022-04-08 11:26:17,150: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,156: format_msg_with_header(info)=b'36   drag                     {"drag": 0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,190: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,240: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6446032.690811836, "currentFuelMass": 1074338.7818019725, "currentRocketTotalMass": 7951371.472613809}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,272: format_msg_with_header(info)=b'304  motion                   {"netThrust": 45188045.85365853, "currentAcceleration": 5.683050528993097, "currentVelocityDelta": 5.683050528993097, "currentVelocity": 5.683050528993097, "currentAltitudeDelta": 5.683050528993097, "currentAltitude": 5.683050528993097, "requiredThrustChange": 63.31871171298348}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,304: format_msg_with_header(info)=b'52   drag                     {"drag": 21162.87234873467}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,304: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,305: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,305: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,336: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6419779.667337958, "currentFuelMass": 1069963.2778896594, "currentRocketTotalMass": 7920742.945227617}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,368: format_msg_with_header(info)=b'308  motion                   {"netThrust": 45467348.834968336, "currentAcceleration": 5.740288398370912, "currentVelocityDelta": 5.740288398370912, "currentVelocity": 11.423338927364009, "currentAltitudeDelta": 11.423338927364009, "currentAltitude": 17.106389456357107, "requiredThrustChange": 63.09198818503923}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,400: format_msg_with_header(info)=b'52   drag                     {"drag": 85412.61213504327}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,400: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,401: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,415: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,430: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6393526.643864079, "currentFuelMass": 1065587.7739773463, "currentRocketTotalMass": 7890114.417841426}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,446: format_msg_with_header(info)=b'307  motion                   {"netThrust": 45703564.948840566, "currentAcceleration": 5.792509782303528, "currentVelocityDelta": 5.792509782303528, "currentVelocity": 17.215848709667537, "currentAltitudeDelta": 17.215848709667537, "currentAltitude": 34.32223816602465, "requiredThrustChange": 62.90024031882154}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,478: format_msg_with_header(info)=b'53   drag                     {"drag": 193675.91162581768}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,478: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 3}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,479: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 3}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,494: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,526: format_msg_with_header(info)=b'192  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6367273.620390201, "currentFuelMass": 1061212.270065033, "currentRocketTotalMass": 7859485.890455235}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,558: format_msg_with_header(info)=b'305  motion                   {"netThrust": 45895767.50300832, "currentAcceleration": 5.839538125355673, "currentVelocityDelta": 5.839538125355673, "currentVelocity": 23.05538683502321, "currentAltitudeDelta": 23.05538683502321, "currentAltitude": 57.37762500104786, "requiredThrustChange": 62.744220354564604}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,590: format_msg_with_header(info)=b'52   drag                     {"drag": 346579.3852323482}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,590: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 4}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,591: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 4}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,606: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,622: format_msg_with_header(info)=b'192  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6341020.596916323, "currentFuelMass": 1056836.76615272, "currentRocketTotalMass": 7828857.3630690435}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,654: format_msg_with_header(info)=b'306  motion                   {"netThrust": 46043329.88306033, "currentAcceleration": 5.881232438881805, "currentVelocityDelta": 5.881232438881805, "currentVelocity": 28.936619273905016, "currentAltitudeDelta": 28.936619273905016, "currentAltitude": 86.31424427495287, "requiredThrustChange": 62.62443694502006}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,686: format_msg_with_header(info)=b'52   drag                     {"drag": 544436.0057446223}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,686: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 5}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,687: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 5}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,718: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,750: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6314767.573442444, "currentFuelMass": 1052461.2622404068, "currentRocketTotalMass": 7798228.835682852}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,782: format_msg_with_header(info)=b'304  motion                   {"netThrust": 46145939.1162066, "currentAcceleration": 5.917489738830655, "currentVelocityDelta": 5.917489738830655, "currentVelocity": 34.85410901273567, "currentAltitudeDelta": 34.85410901273567, "currentAltitude": 121.16835328768855, "requiredThrustChange": 62.54114414510265}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,798: format_msg_with_header(info)=b'52   drag                     {"drag": 787235.7079968007}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,799: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 6}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,799: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 6}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,814: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,846: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6288514.549968566, "currentFuelMass": 1048085.7583280938, "currentRocketTotalMass": 7767600.308296661}'
+sent to subscribers
+INFO       2022-04-08 11:26:17,862: format_msg_with_header(info)=b'304  motion                   {"netThrust": 46203605.26761295, "currentAcceleration": 5.948247004710368, "currentVelocityDelta": 5.948247004710368, "currentVelocity": 40.80235601744604, "currentAltitudeDelta": 40.80235601744604, "currentAltitude": 161.9707093051346, "requiredThrustChange": 62.49433378443803}'
+sent to subscribers
+INFO       2022-04-08 11:29:16,962: {'name': 'fuel_flow', 'regex': ''} conveted to object
+INFO       2022-04-08 11:29:16,962: {'name': 'thrust', 'regex': ''} conveted to object
+INFO       2022-04-08 11:29:16,962: {'name': 'drag', 'regex': ''} conveted to object
+INFO       2022-04-08 11:29:16,962: {'name': 'motion', 'regex': ''} conveted to object
+INFO       2022-04-08 11:29:16,962: {'name': 'field', 'regex': ''} conveted to object
+INFO       2022-04-08 11:29:16,963: {'name': 'field_update', 'regex': ''} conveted to object
+INFO       2022-04-08 11:29:16,963: start_server_listening while loop started
+INFO       2022-04-08 11:29:40,364: Found ('131.231.86.164', 52667): <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52667)>
+INFO       2022-04-08 11:29:45,421: Found ('131.231.86.164', 52668): <socket.socket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52668)>
+INFO       2022-04-08 11:29:50,662: Found ('131.231.86.164', 52669): <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52669)>
+INFO       2022-04-08 11:29:58,400: Found ('131.231.86.164', 52670): <socket.socket fd=556, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52670)>
+INFO       2022-04-08 11:30:17,812: Found ('131.231.86.164', 52673): <socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('131.231.86.164', 1234), raddr=('131.231.86.164', 52673)>
+INFO       2022-04-08 11:30:21,041: Analysis while loop started for field
+INFO       2022-04-08 11:30:21,041: Analysis while loop started for motion
+INFO       2022-04-08 11:30:21,042: Analysis while loop started for aerodynamics
+INFO       2022-04-08 11:30:21,042: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 0}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,042: format_msg_with_header(info)=b'36   drag                     {"drag": 0}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,042: Analysis while loop started for engine
+INFO       2022-04-08 11:30:21,043: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,043: Analysis while loop started for fuel_tank
+INFO       2022-04-08 11:30:21,198: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6446032.690811836, "currentFuelMass": 1074338.7818019725, "currentRocketTotalMass": 7951371.472613809}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,230: format_msg_with_header(info)=b'304  motion                   {"netThrust": 45188045.85365853, "currentAcceleration": 5.683050528993097, "currentVelocityDelta": 5.683050528993097, "currentVelocity": 5.683050528993097, "currentAltitudeDelta": 5.683050528993097, "currentAltitude": 5.683050528993097, "requiredThrustChange": 63.31871171298348}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,230: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,262: format_msg_with_header(info)=b'52   drag                     {"drag": 21162.87234873467}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,262: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,263: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 1}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,294: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6419779.667337958, "currentFuelMass": 1069963.2778896594, "currentRocketTotalMass": 7920742.945227617}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,326: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,342: format_msg_with_header(info)=b'308  motion                   {"netThrust": 45467348.834968336, "currentAcceleration": 5.740288398370912, "currentVelocityDelta": 5.740288398370912, "currentVelocity": 11.423338927364009, "currentAltitudeDelta": 11.423338927364009, "currentAltitude": 17.106389456357107, "requiredThrustChange": 63.09198818503923}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,374: format_msg_with_header(info)=b'52   drag                     {"drag": 85412.61213504327}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,374: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,375: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 2}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,390: format_msg_with_header(info)=b'193  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6393526.643864079, "currentFuelMass": 1065587.7739773463, "currentRocketTotalMass": 7890114.417841426}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,406: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,454: format_msg_with_header(info)=b'307  motion                   {"netThrust": 45703564.948840566, "currentAcceleration": 5.792509782303528, "currentVelocityDelta": 5.792509782303528, "currentVelocity": 17.215848709667537, "currentAltitudeDelta": 17.215848709667537, "currentAltitude": 34.32223816602465, "requiredThrustChange": 62.90024031882154}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,551: format_msg_with_header(info)=b'53   drag                     {"drag": 193675.91162581768}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,553: format_msg_with_header(info)=b'47   field_update             {"currentTimestep": 3}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,556: format_msg_with_header(info)=b'47   field                    {"currentTimestep": 3}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,575: format_msg_with_header(info)=b'192  fuel_flow                {"currentMassFlowRate": 30628.52738619129, "currentOxidiserMass": 6367273.620390201, "currentFuelMass": 1061212.270065033, "currentRocketTotalMass": 7859485.890455235}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,583: format_msg_with_header(info)=b'55   thrust                   {"currentThrust": 123191000.0}'
+sent to subscribers
+INFO       2022-04-08 11:30:21,678: format_msg_with_header(info)=b'305  motion                   {"netThrust": 45895767.50300832, "currentAcceleration": 5.839538125355673, "currentVelocityDelta": 5.839538125355673, "currentVelocity": 23.05538683502321, "currentAltitudeDelta": 23.05538683502321, "currentAltitude": 57.37762500104786, "requiredThrustChange": 62.744220354564604}'
+sent to subscribers
