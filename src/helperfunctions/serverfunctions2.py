@@ -25,7 +25,6 @@ def format_msg_with_header(msg: str, header_size: int = HEADERSIZE):
 
 
 def recv_msg(participant_socket: socket.socket) -> str:
-    # try:
     while True:
         len_str = participant_socket.recv(HEADERSIZE)
         if len_str:
@@ -33,8 +32,3 @@ def recv_msg(participant_socket: socket.socket) -> str:
             return_str = participant_socket.recv(msg_len).decode("utf-8")
             if return_str:
                 return return_str
-
-
-# except Exception as e:
-#     print(f"Error Occured\n{e}")
-#     return None
