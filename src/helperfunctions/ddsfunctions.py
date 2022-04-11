@@ -21,6 +21,7 @@ def print_initial_info():
     print("Server is going to start")
 
 
+# Topics func
 def set_topics(dds_info_object: DDSInfo):
     dds_info_object.add_topic_info_from_list(topic_list=topics)
 
