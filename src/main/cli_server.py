@@ -19,7 +19,9 @@ from helperfunctions.ddsfunctions import instantiate_dds
 
 FORMAT = "%(levelname)-10s %(asctime)s: %(message)s"
 logging.basicConfig(
-    handlers=[logging.FileHandler(filename="src/LOGS/logs.log", encoding='utf-8', mode='w')],
+    handlers=[
+        logging.FileHandler(filename="src/LOGS/logs.log", encoding="utf-8", mode="w")
+    ],
     level=logging.DEBUG,
     format=FORMAT,
 )

@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "gui-venv\\Scripts\\python.exe",
+  "python.pipenvPath": "gui-venv\\Scripts\\python.exe",
   "python.linting.enabled": false,
   "python.terminal.activateEnvironment": true,
   "terminal.integrated.env.osx": {
