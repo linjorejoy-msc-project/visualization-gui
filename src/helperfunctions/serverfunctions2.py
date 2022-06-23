@@ -11,7 +11,7 @@ def start_server(
     addressFamily=socket.AF_INET,
     socketKind=socket.SOCK_STREAM,
     hostName=socket.gethostname(),
-    port: int = 1235,
+    port: int = 1234,
 ):
     new_socket = socket.socket(addressFamily, socketKind)
     new_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
