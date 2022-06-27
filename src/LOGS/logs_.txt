@@ -2,6 +2,5 @@ Logs for Simulation
 Start Time     :2022-04-03 19:20:53.234948
 
 
-
 Simulation Ended
 End Time       :2022-04-03 19:21:21.237839
