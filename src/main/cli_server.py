@@ -16,7 +16,6 @@ from helperfunctions.serverfunctions2 import (
 from helperfunctions.ddsfunctions import instantiate_dds
 
 # Logging
-
 FORMAT = "%(levelname)-10s %(asctime)s: %(message)s"
 logging.basicConfig(
     handlers=[
