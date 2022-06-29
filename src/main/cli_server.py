@@ -27,7 +27,8 @@ logging.basicConfig(
 )
 
 # DDS
-server_socket: socket.socket = start_server()
+server_socket: socket.socket = start_server(hostName="192.168.1.2")
+print(server_socket)
 dds_info_object: DDSInfo = DDSInfo()
 
 # Constants
