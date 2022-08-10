@@ -13,6 +13,7 @@ topics = [
     {"name": "field", "regex": ""},
     {"name": "field_update", "regex": ""},
     {"name": "atmosphere", "regex": ""},
+    {"name": "motion_update", "regex": ""},
 ]
 
 
