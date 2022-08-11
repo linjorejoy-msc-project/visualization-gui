@@ -11,9 +11,10 @@ topics = [
     {"name": "drag", "regex": ""},
     {"name": "motion", "regex": ""},
     {"name": "field", "regex": ""},
-    {"name": "field_update", "regex": ""},
     {"name": "atmosphere", "regex": ""},
+    {"name": "field_update", "regex": ""},
     {"name": "motion_update", "regex": ""},
+    {"name": "fuel_flow_update", "regex": ""},
 ]
 
 
