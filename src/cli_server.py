@@ -83,31 +83,46 @@ def send_constants(participant_obj: Participant):
             break
 
 
-def handle_participant(participant_obj: Participant):
+def handle_participant(
+    participant_socket: socket.socket,
+    participant_address,
+):
     global analysis_started
     global constants_set
 
-    if participant_obj.config_data.name == "field":
-        set_constants(participant_obj)
+    # Send Config
+    participant_socket.send(format_msg_with_header("CONFIG"))
+    config_str = recv_msg(participant_socket)
+
+    # save data of participant
+    this_participant_obj = save_data_of_participant(
+        participant_socket, participant_address, config_str
+    )
+
+    # -------------
+    if this_participant_obj.config_data.name == "field":
+        set_constants(this_participant_obj)
         constants_set = True
 
     # Setting Constants
-    if constants_set and participant_obj.config_data.name != "field":
-        send_constants(participant_obj)
+    if constants_set and this_participant_obj.config_data.name != "field":
+        send_constants(this_participant_obj)
 
     # Start Analysis Procedure
     while True:
         if analysis_started:
-            participant_obj.get_participant_socket().send(
+            this_participant_obj.get_participant_socket().send(
                 format_msg_with_header("START")
             )
             break
 
     # Start Analysis
-    logging.info(f"Analysis while loop started for {participant_obj.config_data.name}")
+    logging.info(
+        f"Analysis while loop started for {this_participant_obj.config_data.name}"
+    )
     while True:
-        info = recv_msg(participant_obj.get_participant_socket())
-        send_info_to_subscribers(info, participant_obj)
+        info = recv_msg(this_participant_obj.get_participant_socket())
+        send_info_to_subscribers(info, this_participant_obj)
 
 
 def request_analysis_start(new_participant_address):
@@ -137,14 +152,19 @@ def save_data_of_participant(
 
 
 def instantiate_participant(
-    participant_socket: socket.socket, participant_address, config_str: str
+    participant_socket: socket.socket,
+    participant_address,
 ):
-    this_participant_obj = save_data_of_participant(
-        participant_socket, participant_address, config_str
-    )
+    # this_participant_obj = save_data_of_participant(
+    #     participant_socket, participant_address, config_str
+    # )
 
     this_participant_thread = threading.Thread(
-        target=handle_participant, args=(this_participant_obj,)
+        target=handle_participant,
+        args=(
+            participant_socket,
+            participant_address,
+        ),
     )
     this_participant_thread.start()
 
@@ -159,15 +179,13 @@ def start_server_listening():
         logging.info(f"Found {new_participant_address}: {new_participant}")
 
         # Config
-        new_participant.send(format_msg_with_header("CONFIG"))
-        config_str = recv_msg(new_participant)
+        # new_participant.send(format_msg_with_header("CONFIG"))
+        # config_str = recv_msg(new_participant)
 
-        if config_str:
-            instantiate_participant(
-                new_participant, new_participant_address, config_str
-            )
-        else:
-            logging.error(f"Expected Config but receied {config_str=}")
+        # if config_str:
+        instantiate_participant(new_participant, new_participant_address)
+        # else:
+        #     logging.error(f"Expected Config but receied {config_str=}")
 
         request_analysis_start(new_participant_address)
 

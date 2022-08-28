@@ -13,8 +13,9 @@ topics = [
     {"name": "field", "regex": ""},
     {"name": "atmosphere", "regex": ""},
     {"name": "field_update", "regex": ""},
-    {"name": "motion_update", "regex": ""},
-    {"name": "fuel_flow_update", "regex": ""},
+    {"name": "field_update_realtime", "regex": ""},
+    {"name": "motion_update_realtime", "regex": ""},
+    {"name": "fuel_flow_update_realtime", "regex": ""},
 ]
 
 
